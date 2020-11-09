@@ -8,7 +8,6 @@ export default function admin() {
     return (
         <div>
             <h3 className="heading">Add New Course</h3>
-            {/* <div className="container1"> */}
             <Container className="container">
                 <div className="main">
                     <Grid className="grid" style={{height:"300px"}}>
@@ -36,7 +35,7 @@ export default function admin() {
                                 <Card className="card11">Certification of Compeletions</Card>
                             </div>
                             <div className="card1">
-                                <Card className="card11">Course Name</Card> 
+                                <Card className="card11">7 hours on demand video</Card> 
                                 <Card className="card11"><p><span className="loprem">loprem lpsum <HighlightOffIcon className="delete_icon" /></span><span className="add_tag">Add Tags</span></p></Card>          
                                 <Card className="card11">Upload or choose from the library <PublishIcon style={{fontSize: '28px'}}className="publish_icon" /></Card>
                             </div>

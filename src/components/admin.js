@@ -11,7 +11,7 @@ export default function admin() {
             {/* <div className="container1"> */}
             <Container className="container">
                 <div className="main">
-                    <Grid className="grid" style={{height:"250px"}}>
+                    <Grid className="grid" style={{height:"350px"}}>
                         <div className="grid1_card1">
                             <div className="card1">
                                 <Card className="card11">Course Name</Card> 
@@ -21,7 +21,7 @@ export default function admin() {
                             <div className="card1">
                                 <Card className="card11">Course Name</Card> 
                                 <Card className="card11"><p><span className="loprem">loprem lpsum <HighlightOffIcon className="delete_icon" /></span><span className="add_tag">Add Tags</span></p></Card>          
-                                <Card className="card11" style={{height:"250px"}}>Upload or choose from the library <PublishIcon style={{fontSize: '28px'}}className="publish_icon" /></Card>
+                                <Card className="card11" style={{height:"150px"}}>Upload or choose from the library <PublishIcon style={{fontSize: '28px'}}className="publish_icon" /></Card>
                             </div>
                         </div>
                     </Grid>

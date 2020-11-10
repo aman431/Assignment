@@ -7,6 +7,12 @@ import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 import AddCircleRoundedIcon from '@material-ui/icons/AddCircleRounded';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AttachmentIcon from '@material-ui/icons/Attachment';
+import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
+import PhotoIcon from '@material-ui/icons/Photo';
+import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import LinkIcon from '@material-ui/icons/Link';
+import FormatColorTextIcon from '@material-ui/icons/FormatColorText'
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,6 +34,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 900,
     height: 50
   },
+  icons: {
+    paddingLeft: 5,
+    fontSize:22
+  }
 }));
 export default function FullWidthGrid() {
   const classes = useStyles();
@@ -53,16 +63,28 @@ export default function FullWidthGrid() {
           <Paper className={classes.paper}>Course Duration</Paper>
         </Grid>
         <Grid item xs={6} style={{display:"flex", justifyContent:"space-between",}}>
-          <Paper className={classes.paper} style={{width:"540px",height:"60px",display:"flex", justifyContent:"space-between"}}>
+          <Paper className={classes.paper} style={{width:"540px",height:"50px",display:"flex", justifyContent:"space-between"}}>
             Upload or choose from library
-            <PublishIcon  style={{fontSize: '28px', marginLeft:"59%"}}/>
+            <PublishIcon  style={{fontSize: '28px', marginLeft:"59%"}} />
           </Paper>
           <AddCircleRoundedIcon style={{fontSize:"35px"}}/>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.papers} style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"150px"}}>
             Course Description
-            <AttachmentIcon />
+            <div style={{display:"flex", justifyContent:"space-between"}}>
+              <div className="aman">
+              <AttachmentIcon className={classes.icons}/>
+              <InsertEmoticonIcon className={classes.icons}/>
+              <LinkIcon className={classes.icons}/>
+              < FormatColorTextIcon className={classes.icons}/>
+              <InsertDriveFileIcon className={classes.icons}/>
+              < PhotoIcon className={classes.icons}/>
+              </div>
+              <div className="delet">
+                <DeleteIcon style={{color:"red"}}/>
+              </div>
+            </div>
           </Paper>
         </Grid>
       </Grid>
@@ -80,7 +102,22 @@ export default function FullWidthGrid() {
           <Paper className={classes.paper}>Certificate of completion</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.papers}>Title</Paper>
+          <Paper className={classes.papers} style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"150px"}}>
+            Course Description
+            <div style={{display:"flex", justifyContent:"space-between"}}>
+              <div className="aman">
+              <AttachmentIcon className={classes.icons}/>
+              <InsertEmoticonIcon className={classes.icons}/>
+              <LinkIcon className={classes.icons}/>
+              < FormatColorTextIcon className={classes.icons}/>
+              <InsertDriveFileIcon className={classes.icons}/>
+              < PhotoIcon className={classes.icons}/>
+              </div>
+              <div className="delet">
+                <DeleteIcon style={{color:"red"}}/>
+              </div>
+            </div>
+          </Paper>
         </Grid>
       </Grid>
       <Grid container spacing={3} className={classes.root}>
@@ -90,11 +127,29 @@ export default function FullWidthGrid() {
         <Grid item xs={6}>
           <Paper className={classes.paper}>Model Name</Paper>
         </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>Upload/File</Paper>
+        <Grid item xs={6} style={{display:"flex", justifyContent:"space-between"}}>
+          <Paper className={classes.paper} style={{width:"540px",height:"50px",display:"flex", justifyContent:"space-between"}}>
+            Upload/File
+            <PublishIcon  style={{fontSize:"28px"}}/>
+          </Paper>
+          <AddCircleRoundedIcon style={{fontSize:"35px"}}/>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.papers}>Module Description</Paper>
+          <Paper className={classes.papers}  style={{display:"flex", flexDirection:"column", justifyContent:"space-between", height:"150px"}}>Module Description
+          <div style={{display:"flex", justifyContent:"space-between"}}>
+              <div className="aman">
+              <AttachmentIcon className={classes.icons}/>
+              <InsertEmoticonIcon className={classes.icons}/>
+              <LinkIcon className={classes.icons}/>
+              < FormatColorTextIcon className={classes.icons}/>
+              <InsertDriveFileIcon className={classes.icons}/>
+              < PhotoIcon className={classes.icons}/>
+              </div>
+              <div className="delet">
+                <DeleteIcon style={{color:"red"}}/>
+              </div>
+            </div>
+            </Paper>
         </Grid>
       </Grid>
     </div>

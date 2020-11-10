@@ -62,8 +62,8 @@ export default function FullWidthGrid() {
         <Grid item xs={6}>
           <Paper className={classes.paper}>Course Duration</Paper>
         </Grid>
-        <Grid item xs={6} style={{display:"flex", justifyContent:"space-between",}}>
-          <Paper className={classes.paper} style={{width:"540px",height:"50px",display:"flex", justifyContent:"space-between"}}>
+        <Grid item xs={6} style={{display:"flex", justifyContent:"space-between"}}>
+          <Paper className={classes.paper} style={{width:"540px",height:"60px",display:"flex", justifyContent:"space-between"}}>
             Upload or choose from library
             <PublishIcon  style={{fontSize: '28px', marginLeft:"59%"}} />
           </Paper>

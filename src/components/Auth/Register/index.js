@@ -1,6 +1,6 @@
 import React , {useState} from 'react'
 import {Grid, Form, Segment, Icon, Header, Button, Message} from 'semantic-ui-react';
-
+// import firebase from '../.././'
 const Register = () => {
 
     // Create a Object user
@@ -11,12 +11,11 @@ const Register = () => {
         confirmpassword: ''
     }
 
-    let error = [{message:"Fields are required"}];
+    let error = [];
 
     const [userState, setuserState] = useState(user);
     const [errorState, seterrorState] = useState(error);
     const handleInput = (event) => {
-        // console.log("but clicked")
         let target = event.target;
         setuserState((currentState) => {
             let currentuser = {...currentState};
@@ -27,10 +26,10 @@ const Register = () => {
 
     const checkForm = () => {
         if(isFormValidate()){
-            seterrorState((error) => error.concat({message: "Field are requied"}))
+            seterrorState((error) => error.concat({message: "Field are requied"}));
             // console.log("Working");
             return false;
-        } else if(checkPassword()){
+        } else if(!checkPassword()){
             seterrorState((error) => error.concat({message: "Password is not valid "}))
             return false;
         }
@@ -46,28 +45,25 @@ const Register = () => {
 
     const checkPassword = () => {
         if(userState.password.length < 8){
+            seterrorState((error) => error.concat({ message: "Password lenght be greater than 8"}));
             return false
         } else if (userState.password !== userState.confirmpassword){
+            seterrorState((error) => error.concat({ message: "Passsword and ConfirmPassword doesn't match"}));   
             return false;
         } 
         return true;
     }
 
     const onSubmit = (event) => {
+        seterrorState(() => [])
         if(checkForm()){
 
-        } else {
-
-        }    
+        }  
     }
     const formatError = () => {
         // console.log(errorState);
         // console.log(error)
-        errorState.map((error, index) => {
-            <p key={index}>
-                {error}
-            </p>
-        })
+        return errorState.map((error, index) => <p key={index}>{error.message}</p>)
     }
     return (
         <Grid verticalAlign="middle" textAlign="center">
@@ -86,30 +82,37 @@ const Register = () => {
                         iconPosition="left"
                         onChange = {handleInput}
                         placeholder = "user name"
+                        required="true"
                         />
                         <Form.Input 
                         name="email"
+                        type="email"
                         value={userState.email}
                         icon="mail"
                         iconPosition="left"
                         onChange = {handleInput}
                         placeholder = "user Email"
+                        required="true"
                         />
                         <Form.Input 
                         name="password"
+                        type="password"
                         value={userState.password}
                         icon="lock"
                         iconPosition="left"
                         onChange = {handleInput}
                         placeholder = "Password"
+                        required="true"
                         />
                         <Form.Input 
                         name="confirmpassword"
+                        type="password"
                         value={userState.confirmpassword}
                         icon="lock"
                         iconPosition="left"
                         onChange = {handleInput}
                         placeholder = "Confirm Password"
+                        required="true"
                         />
                     </Segment>
                     <Button>Submit</Button>

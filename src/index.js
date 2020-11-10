@@ -12,14 +12,13 @@ import "semantic-ui-css/semantic.min.css"
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <BrowserRouter>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/login" component={Login}/>
         <Route exact path="/register" component={Register}/>
         <Route exact path="/" component={App}/>
       </Switch>
-    </BrowserRouter> */}
-    <App />
+    </BrowserRouter>
   </React.StrictMode> ,
   document.getElementById('root')
 );

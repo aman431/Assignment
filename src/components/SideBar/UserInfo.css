@@ -1,6 +1,23 @@
+.menu_header{
+    display:'flex';
+    flex-direction: "row"
+}
 .userinfo_grid_row{
     padding: 1.3rem;
 }
 .userinfo_displayname{
     padding: .25rem;
+}
+.User_name{
+    margin-top: 15px;
+    /* color:rgb(145, 142, 142) */
+}
+.avatar{
+    margin: 15px;
+}
+.top_header{
+    display: flex;
+    flex-direction: 'row';
+    justify-content: space-between;
+  
 }

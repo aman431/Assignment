@@ -1,16 +1,14 @@
 import React from 'react';
-// import Admin from './components/admin'
-// import Aman from './components/aman'
 import SideBar from './components/SideBar/SideBar.js';
-import Prathmesh from './components/Prathmesh'
+import Chat from './components/Chat/chat';
 function App() {
   return (
-    <div className="App">
-      {/* <SideBar /> */}
-      <Prathmesh />
-
+    <div>
+      <SideBar />
+      <div style={{ paddingLeft: '250px' }}>
+        <Chat />
+      </div>
     </div>
   );
 }
-
 export default App;

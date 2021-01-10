@@ -59,7 +59,7 @@ export default function FullWidthGrid() {
           Add New Course
         </Grid>
         <Grid item xs={6}>
-          <TextField className={classes.paper}>Course Name</TextField>
+          <Paper className={classes.paper}>Course Name</Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper} style={{display:"flex", justifyContent:"space-between"}}>

@@ -24,12 +24,12 @@ import FormatStrikethroughIcon from '@material-ui/icons/FormatStrikethrough';
 
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-        '& > *': {
-            margin: theme.spacing(1),
-        },
-    },
+    // root: {
+    //     display: 'flex',
+    //     '& > *': {
+    //         margin: theme.spacing(1),
+    //     },
+    // },
     square: {
         color: theme.palette.getContrastText(deepOrange[500]),
         backgroundColor: deepOrange[400],

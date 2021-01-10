@@ -1,7 +1,6 @@
 import React from 'react'
 import './SideBar.css';
 import UserInfo from './UserInfo.js';
-import Channel from './Channels/Channel.js';
 import Search from './Search/Search';
 
 import { Menu } from 'semantic-ui-react';
